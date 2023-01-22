@@ -1,4 +1,4 @@
-package DAOlar.entity;
+package OdulToreni.entity;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,6 +14,11 @@ public class Odul {
     private String odulAdi;
 
     public Odul(String odulAdi) {
+        this.odulAdi = odulAdi;
+    }
+
+    public Odul(Integer id, String odulAdi) {
+        this.id = id;
         this.odulAdi = odulAdi;
     }
 }

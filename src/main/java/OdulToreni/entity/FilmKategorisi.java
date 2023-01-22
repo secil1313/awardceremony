@@ -1,4 +1,4 @@
-package DAOlar.entity;
+package OdulToreni.entity;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

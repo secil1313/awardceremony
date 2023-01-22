@@ -1,7 +1,7 @@
-package DAOlar.repository;
+package OdulToreni.repository;
 
-import DAOlar.entity.Oyuncu;
-import DAOlar.utils.HibernateUtil;
+import OdulToreni.entity.Oyuncu;
+import OdulToreni.utils.HibernateUtil;
 import org.hibernate.Session;
 
 import javax.persistence.EntityManager;

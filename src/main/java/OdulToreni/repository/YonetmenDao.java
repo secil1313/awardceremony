@@ -1,7 +1,7 @@
-package DAOlar.repository;
+package OdulToreni.repository;
 
-import DAOlar.entity.Yonetmen;
-import DAOlar.utils.HibernateUtil;
+import OdulToreni.entity.Yonetmen;
+import OdulToreni.utils.HibernateUtil;
 import org.hibernate.Session;
 
 import javax.persistence.EntityManager;

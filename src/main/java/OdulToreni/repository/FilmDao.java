@@ -1,8 +1,7 @@
-package DAOlar.repository;
+package OdulToreni.repository;
 
-import DAOlar.entity.Film;
-import DAOlar.entity.Oyuncu;
-import DAOlar.utils.HibernateUtil;
+import OdulToreni.entity.Film;
+import OdulToreni.utils.HibernateUtil;
 import org.hibernate.Session;
 
 import javax.persistence.EntityManager;
@@ -14,7 +13,7 @@ public class FilmDao {
         List<Object[]> bookList = null;
         try {
             EntityManager entityManager = HibernateUtil.getSessionFactory().createEntityManager();
-            String query = "use odul_toreni; \n" +
+            String query =
                     "select f.filmAdi,oy.oyuncuFullName,o.odulAdi,y.yonetmenFullName from film as f\n" +
                     "inner join yonetmen as y on  f.yonetmenAdi_id=y.id\n" +
                     "inner join film_oyuncu as foy on foy.Film_id=f.id\n" +

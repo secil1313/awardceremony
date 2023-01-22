@@ -1,10 +1,10 @@
-package DAOlar.service;
+package OdulToreni.service;
 
-import DAOlar.entity.*;
+import OdulToreni.entity.*;
 
-import DAOlar.repository.FilmDao;
-import DAOlar.repository.OyuncuDao;
-import DAOlar.repository.YonetmenDao;
+import OdulToreni.repository.FilmDao;
+import OdulToreni.repository.OyuncuDao;
+import OdulToreni.repository.YonetmenDao;
 
 import java.util.Arrays;
 
@@ -20,8 +20,14 @@ public class OdulService {
         //updateF();
        //deleteByIdF();
         //getAllO();
+        //getAllY();
+        //updateO();
+        //updateY();
+        //deleteByIdO();
+        //deleteByIdY();
+        getAllF();
+       // getByName("The Father");
 
-        getByName("The Father");
     }
     public static void saveF(){
         Yonetmen yonetmen=new Yonetmen("Chloé Zhao");
@@ -46,10 +52,15 @@ public class OdulService {
         filmDao.updateF(film);
     }
     public static void deleteByIdF(){
+
         filmDao.deleteF(1);
     }
     public static void getByName(String name){
         filmDao.getByName(name);
+    }
+    public static void getAllF() {
+
+        filmDao.getAll();
     }
 
     public static void saveO(){
@@ -57,11 +68,25 @@ public class OdulService {
         FilmKategorisi filmKategorisi=new FilmKategorisi("Dram");
         Film film=new Film("The Father",yonetmen,Arrays.asList(filmKategorisi));
         Odul odul=new Odul("En İyi Erkek Oyuncu");
-        Oyuncu oyuncu=new Oyuncu("Anthony Hopkins",
-                Arrays.asList(film),
-                Arrays.asList(odul));
+        Oyuncu oyuncu=new Oyuncu("Anthony Hopkins",Arrays.asList(film),Arrays.asList(odul));
         oyuncuDao.saveO(oyuncu);
 
+    }
+    public static void getAllO() {
+
+        oyuncuDao.getAllO();
+    }
+    public static void updateO(){
+        Yonetmen yonetmen=new Yonetmen("Gus Van Sant");
+        FilmKategorisi filmKategorisi=new FilmKategorisi("Dram");
+        Film film=new Film("Milk",yonetmen,Arrays.asList(filmKategorisi));
+        Odul odul=new Odul("En İyi Erkek Oyuncu");
+        Oyuncu oyuncu=new Oyuncu(1,"Sean Penn",Arrays.asList(film),Arrays.asList(odul));
+        oyuncuDao.updateO(oyuncu);
+    }
+    public static void deleteByIdO(){
+
+        oyuncuDao.deleteO(1);
     }
     public static void saveY(){
 
@@ -71,8 +96,21 @@ public class OdulService {
         Yonetmen yonetmen=new Yonetmen("Chloé Zhao",Arrays.asList(film),Arrays.asList(odul));
         yonetmenDao.saveY(yonetmen);
     }
-    public static void getAllO() {
-        oyuncuDao.getAllO();
+    public static void updateY(){
+        FilmKategorisi filmKategorisi=new FilmKategorisi("Dram");
+        Film film=new Film("Parazit",Arrays.asList(filmKategorisi));
+        Odul odul=new Odul("En İyi Yönetmen");
+        Yonetmen yonetmen=new Yonetmen(1,"Bong Joon-ho",Arrays.asList(film),Arrays.asList(odul));
+        yonetmenDao.updateY(yonetmen);
     }
+    public static void deleteByIdY(){
+
+        yonetmenDao.deleteY(1);
+    }
+    public static void getAllY() {
+
+        yonetmenDao.getAll();
+    }
+
     }
 

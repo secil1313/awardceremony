@@ -1,6 +1,6 @@
-package DAOlar.utils;
+package OdulToreni.utils;
 
-import DAOlar.entity.*;
+import OdulToreni.entity.*;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
